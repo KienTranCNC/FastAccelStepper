@@ -1,7 +1,7 @@
 #ifndef AVRSTEPPERPINS_H
 #define AVRSTEPPERPINS_H
 
-#if defined(ARDUINO_ARCH_AVR)
+#if defined(ARDUINO_ARCH_AVR) || defined(__LGT8FX8P__)
 #include <Arduino.h>
 
 /** * Warning: Other libraries may also use the timers!
@@ -12,7 +12,7 @@
  * possible!
  */
 
-#if !(defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
+#if !defined(__LGT8FX8P__) || (defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
       defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || \
       defined(__AVR_ATmega2560__) || defined(__AVR_ATmega32U4__))
 #error "Unsupported AVR derivate"
@@ -20,7 +20,7 @@
 
 // The ATmega328P has one 16 bit timer: Timer 1
 // The ATmega2560 has four 16 bit timers: Timer 1, 3, 4 and 5
-#if (defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
+#if defined(__LGT8FX8P__) || (defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
      defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__))
 #define FAS_TIMER_MODULE 1
 #define stepPinStepper1A 9  /* OC1A */

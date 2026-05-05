@@ -70,4 +70,15 @@
 // LOG2_CONST_15373 = 7120.953125  7121 = 0x1bd1
 #define LOG2_CONST_15373 ((log2_value_t)0x1bd1)
 // => converted back => 15373.98
+// LOG2_CONST_32E6 = 12764.963107  12765 = 0x31dd
+#define LOG2_CONST_32E6 ((log2_value_t)0x31dd)
+// => converted back => 32001598.29
+
+// LOG2_CONST_32E6_DIV_SQRT_OF_2 = 12508.963107  12509 = 0x30dd
+#define LOG2_CONST_32E6_DIV_SQRT_OF_2 ((log2_value_t)0x30dd)
+// => converted back => 22628547.16
+
+// LOG2_CONST_512E12 = 25017.926215  25018 = 0x61ba
+#define LOG2_CONST_512E12 ((log2_value_t)0x61ba)
+// => converted back => 512051146427542.50
 #endif
