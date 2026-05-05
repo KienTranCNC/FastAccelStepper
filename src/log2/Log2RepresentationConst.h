@@ -71,6 +71,7 @@
 #define LOG2_CONST_15373 ((log2_value_t)0x1bd1)
 // => converted back => 15373.98
 // LOG2_CONST_32E6 = 12764.963107  12765 = 0x31dd
+
 #define LOG2_CONST_32E6 ((log2_value_t)0x31dd)
 // => converted back => 32001598.29
 
