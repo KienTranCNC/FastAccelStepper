@@ -1,7 +1,7 @@
 #ifndef AVRSTEPPERPINS_H
 #define AVRSTEPPERPINS_H
 
-#if defined(ARDUINO_ARCH_AVR) || defined(__LGT8FX8P__)
+#if (defined(ARDUINO_ARCH_AVR) || defined(__LGT8FX8P__))
 #include <Arduino.h>
 
 /** * Warning: Other libraries may also use the timers!
@@ -12,7 +12,7 @@
  * possible!
  */
 
-#if !defined(__LGT8FX8P__) || (defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
+#if !(defined(__LGT8FX8P__) || defined(__AVR_ATmega168__) || defined(__AVR_ATmega168P__) || \
       defined(__AVR_ATmega328__) || defined(__AVR_ATmega328P__) || \
       defined(__AVR_ATmega2560__) || defined(__AVR_ATmega32U4__))
 #error "Unsupported AVR derivate"
